@@ -32,10 +32,9 @@ export const calculator = {
 export function caesarCipher(string, shiftFactor = 0){
     const lettersOnly = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     const lettersAndPunctuation = ['.',',','?','!','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    let punctuationIncluded = false;
-
-    let index = 0;
     const newString = [];
+    let punctuationIncluded = false;
+    let index = 0;
 
     if(string.match(/[.,?!]/)) punctuationIncluded = true;
 
@@ -58,6 +57,18 @@ export function caesarCipher(string, shiftFactor = 0){
 
         index++;
     }
-    
+
     return newString.join('');
+}
+
+export function analyzeArray(arr){
+    const obj = {};
+
+    arr.sort((a,b) => a - b);
+    obj.average = arr.reduce((sum, addend) => sum + addend) / arr.length
+    obj.min = arr[0];
+    obj.max = arr[arr.length - 1];
+    obj.length = arr.length;
+
+    return obj;
 }
