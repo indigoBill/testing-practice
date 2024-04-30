@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from './testing_practice';
+import { capitalize, reverseString, calculator, caesarCipher } from './testing_practice';
 
 describe('capitalize first letter', () => {
     test('all lowercase', () => {
@@ -36,7 +36,7 @@ describe('calculator functions', () => {
         });
 
         test('string plus number', () => {
-            expect(calculator.add('8', 20)).toBe('Invalid Input');
+            expect(calculator.add('8', 20)).toBeUndefined();
         });
 
         test('neg. number plus neg. number', () => {
@@ -54,7 +54,7 @@ describe('calculator functions', () => {
         });
 
         test('string minus number', () => {
-            expect(calculator.subtract('9', 2)).toBe('Invalid Input');
+            expect(calculator.subtract('9', 2)).toBeUndefined();
         });
 
         test('pos. number minus neg. number', () => {
@@ -72,7 +72,7 @@ describe('calculator functions', () => {
         });
 
         test('string divided by number', () => {
-            expect(calculator.divide('0', 7)).toBe('Invalid Input');
+            expect(calculator.divide('0', 7)).toBeUndefined();
         });
 
         test('number divided by 0', () => {
@@ -90,7 +90,7 @@ describe('calculator functions', () => {
         });
 
         test('string multiplied by number', () => {
-            expect(calculator.multiply('17', 2)).toBe('Invalid Input');
+            expect(calculator.multiply('17', 2)).toBeUndefined();
         });
         
         test('pos. number multiplied by neg. number', () => {
