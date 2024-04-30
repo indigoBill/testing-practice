@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, caesarCipher } from './testing_practice';
+import { capitalize, reverseString, calculator, caesarCipher, analyzeArray } from './testing_practice';
 
 describe('capitalize first letter', () => {
     test('all lowercase', () => {
